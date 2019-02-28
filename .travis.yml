@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 # .travis.yml file
+=======
+>>>>>>> 174e269e6ee980d33373a52348fb9c49e1777d02
 language: node_js
 node_js:
   - "8"
@@ -10,4 +13,14 @@ sudo: false
 install:
   - npm install
 script:
+<<<<<<< HEAD
   - npm test
+=======
+  - npm test
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: chmod +x ./deploy.sh && ./deploy.sh
+    on:
+      branch: master
+>>>>>>> 174e269e6ee980d33373a52348fb9c49e1777d02
